@@ -1,3 +1,5 @@
+import { formatNumber } from "@/utils/currencyFormat";
+
 type ProductsItemPropsType = {
   id: number;
   image: string;
@@ -22,9 +24,13 @@ const ProductsItem = ({
 
         {count >= 1 ? (
           <div className="card__btn__flex">
-            <button type="button" className="card--btn--minus">-</button>
+            <button type="button" className="card--btn--minus">
+              -
+            </button>
             <p className="card--price">{count}</p>
-            <button type="button" className="card--btn--plus">+</button>
+            <button type="button" className="card--btn--plus">
+              +
+            </button>
           </div>
         ) : (
           <button type="button" className="card--btn--add-to">
@@ -36,7 +42,7 @@ const ProductsItem = ({
       <div className="product__card__bottom">
         <p className="card__category">{category}</p>
         <h2 className="card__name">{name}</h2>
-        <p className="card__price">{price}</p>
+        <p className="card__price">{formatNumber(price)}</p>
       </div>
     </div>
   );
