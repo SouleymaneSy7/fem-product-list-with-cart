@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "image": "@/assets/images/image-waffle-tablet.jpg",
+    "image": "@/assets/images/image-waffle-desktop.jpg",
     "name": "Waffle with Berries",
     "category": "Waffle",
     "price": 6.5
