@@ -9,8 +9,8 @@ type ProductsType = {
 };
 
 type cartItemsType = ProductsType & {
-  id?: number;
-  cartQuantity?: number;
+  id: number;
+  cartQuantity: number;
 };
 
 type StateType = {
