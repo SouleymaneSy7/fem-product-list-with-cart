@@ -1,7 +1,9 @@
+import React from "react";
 import useCartStore from "@/store/productStore";
+import emptyCartIcon from "@/assets/images/illustration-empty-cart.svg";
+import carbonNeutralIcon from "@/assets/images/icon-carbon-neutral.svg";
 import CartsItem from "./CartsItem";
 import { formatNumber } from "@/utils/currencyFormat";
-import React from "react";
 import ConfirmModal from "./ConfirmModal";
 import productData from "@/data/productData.json";
 
@@ -32,7 +34,7 @@ const Carts = () => {
 
   return (
     <React.Fragment>
-      <div>
+      <div className="cart-container">
         {cartItems.length > 0 ? (
           <section className="cart">
             <h2 className="cart__title">Your Cart ({cartQuantity})</h2>
@@ -51,10 +53,7 @@ const Carts = () => {
 
             <div className="cart__information">
               <div>
-                <img
-                  src="../assets/images/icon-carbon-neutral.svg"
-                  alt="Carbon Neutral Icon"
-                />
+                <img src={carbonNeutralIcon} alt="Carbon Neutral Icon" />
               </div>
 
               <p>
@@ -74,13 +73,10 @@ const Carts = () => {
           </section>
         ) : (
           <section className="cart">
-            <h2 className="cart__title">Your Cart: ({cartItems.length}) </h2>
+            <h2 className="cart__title">Your Cart ({cartItems.length}) </h2>
 
             <div className="cart__empty-img">
-              <img
-                src="/src/assets/images/illustration-empty-cart.svg"
-                alt="Empty Cart Illustration"
-              />
+              <img src={emptyCartIcon} alt="Empty Cart Illustration" />
 
               <p>Your added items will appear here</p>
             </div>
