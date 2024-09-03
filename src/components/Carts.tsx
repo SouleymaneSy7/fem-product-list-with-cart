@@ -1,11 +1,13 @@
 import React from "react";
+
 import useCartStore from "@/store/productStore";
-import emptyCartIcon from "@/assets/images/illustration-empty-cart.svg";
-import carbonNeutralIcon from "@/assets/images/icon-carbon-neutral.svg";
 import CartsItem from "./CartsItem";
-import { formatNumber } from "@/utils/currencyFormat";
 import ConfirmModal from "./ConfirmModal";
 import productData from "@/data/productData.json";
+import Button from "./Buttons";
+
+import { formatNumber } from "@/utils/currencyFormat";
+import { CarbonNeutralIcon, EmptyCartIcon } from "./icons/Icons.component";
 
 const Carts = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -53,7 +55,7 @@ const Carts = () => {
 
             <div className="cart__information">
               <div>
-                <img src={carbonNeutralIcon} alt="Carbon Neutral Icon" />
+                <CarbonNeutralIcon />
               </div>
 
               <p>
@@ -61,22 +63,21 @@ const Carts = () => {
               </p>
             </div>
 
-            <button
-              type="button"
+            <Button
               className="cart--confirm-btn"
               onClick={() => {
                 showConfirmModal();
               }}
             >
               Confirm Order
-            </button>
+            </Button>
           </section>
         ) : (
           <section className="cart">
             <h2 className="cart__title">Your Cart ({cartItems.length}) </h2>
 
             <div className="cart__empty-img">
-              <img src={emptyCartIcon} alt="Empty Cart Illustration" />
+              <EmptyCartIcon />
 
               <p>Your added items will appear here</p>
             </div>
