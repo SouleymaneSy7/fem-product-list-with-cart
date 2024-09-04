@@ -1,50 +1,95 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Product list with cart Solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Design preview for the Product list with cart coding challenge](./preview/preview.jpg)
 
-Currently, two official plugins are available:
+## Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site Demo URL: [Add live site URL here](https://your-live-site-url.com)
 
-## Expanding the ESLint configuration
+## Welcome! 👋
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Thanks for checking out this front-end coding challenge.
 
-- Configure the top-level `parserOptions` property like this:
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Table of contents
+
+- [The Challenge](#the-challenge)
+- [Screenshots](#screenshots)
+- [Built With](#built-with)
+- [How To Use This Repos](#how-to-use-this-repos)
+- [Author](#author)
+
+### The challenge
+
+Users should be able to:
+
+- Add items to the cart and remove them
+- Increase/decrease the number of items in the cart
+- See an order confirmation modal when they click "Confirm Order"
+- Reset their selections when they click "Start New Order"
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+
+## Screenshots
+
+### Mobile
+
+![Mobile Screenshot](./preview/Mobile.png)
+
+### Mobile Active
+
+![Mobile Active Screenshot](./preview/Mobile-Active.png)
+
+### Mobile Modal
+
+![Mobile Modal Screenshot](./preview/Mobile-Modal.png)
+
+### Desktop
+
+![Desktop Screenshot](./preview/Desktop.png)
+
+### Desktop Active
+
+![Desktop Active Screenshot](./preview/Desktop-Active.png)
+
+### Desktop Modal
+
+![Desktop Modal Screenshot](./preview/Desktop-Modal.png)
+
+## Built with
+
+- Semantic HTML5 markup
+- SASS
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [Vite Js](https://vitejs.dev/) - Javascript Bundler.
+- [PNPM](https://pnpm.io/) - Package Manager.
+- [React Js](https://react.dev/) - Javascript Framework.
+- [Typescript](https://typescript) - A strongly typed language, builds on top of javascript.
+- [Zustand](https://zustand.docs.pmnd.rs/getting-started/introduction) - A small, fast, and scalable state management solution.
+
+## How To Use This Repos
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [PNPM](http://pnpm.io/) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/SouleymaneSy7/fem-product-list-with-cart
+
+# Install dependencies
+$ pnpm install
+
+# start the server
+$ pnpm dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Author
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- GitHub - [Souleymane Sy](https://github.com/SouleymaneSy7)
+- Frontend Mentor - [@SouleymaneSy7](https://www.frontendmentor.io/profile/SouleymaneSy7)
+- Dev Challenges - [Souleymane Sy](https://devchallenges.io/profile/534cd213-3165-4c16-bdcf-058e1f468da0)
+- Twitter - [@Souleymanesy43](https://twitter.com/Souleymanesy43)
