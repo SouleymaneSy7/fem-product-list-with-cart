@@ -1,8 +1,12 @@
 import React from "react";
-import confirmIcon from "@/assets/images/icon-order-confirmed.svg";
-import { formatNumber } from "@/utils/currencyFormat";
 import { createPortal } from "react-dom";
+
+import { formatNumber } from "@/utils/currencyFormat";
+import { OrderConfirmedIcon } from "./icons/Icons.component";
+
+import Button from "./Buttons";
 import useCartStore from "@/store/productStore";
+import ConfirmModalItems from "./ConfirmModalItems";
 
 const confirmModalDOM = document.querySelector("#confirm-modal-root");
 
@@ -39,7 +43,7 @@ const ConfirmModal = ({
           <div className="confirm-modal-container">
             <div className="confirm">
               <div className="confirm__img">
-                <img src={confirmIcon} alt="Confirm Icon SVG" />
+                <OrderConfirmedIcon />
               </div>
 
               <h2 className="confirm__title">Order Confirmed</h2>
@@ -48,33 +52,7 @@ const ConfirmModal = ({
 
               <div className="confirm__cart-item-container">
                 {cartData.map((item) => (
-                  <div className="confirm__cart-item__flex" key={item.id}>
-                    <div className="confirm__cart-item">
-                      <img
-                        className="confirm__cart-item__img"
-                        src={item.image}
-                        alt={`${item.name} food image`}
-                      />
-                      <div className="confirm__cart-item__information">
-                        <h3 className="confirm__cart-item__information__name">
-                          {item.name}
-                        </h3>
-
-                        <div className="confirm__cart-item__information__flex">
-                          <p className="confirm__cart-item__information__quantity">
-                            {item.cartQuantity}x
-                          </p>
-                          <p className="confirm__cart-item__information__total-price">
-                            @ {formatNumber(item.price)}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="confirm__cart-item--price">
-                      <p>{formatNumber(item.price * item.cartQuantity)}</p>
-                    </div>
-                  </div>
+                  <ConfirmModalItems key={item.id} item={item} />
                 ))}
 
                 <div className="confirm__cart-item__order">
@@ -83,15 +61,14 @@ const ConfirmModal = ({
                 </div>
               </div>
 
-              <button
-                type="button"
+              <Button
                 className="confirm__cart-item--btn"
                 onClick={() => {
                   closeModal();
                 }}
               >
                 Start New Order
-              </button>
+              </Button>
             </div>
           </div>,
           confirmModalDOM!
