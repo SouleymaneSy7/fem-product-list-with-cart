@@ -276,17 +276,7 @@ body {
   }
 
   &--confirm-btn {
-    @include x-btn-reset;
-
-    width: 100%;
-
-    color: var(--color-neutral-white);
-
-    background-color: var(--color-red);
-    border-radius: var(--full-border-radius);
-
-    padding: rem(12px);
-    cursor: pointer;
+    @include x-primary-btn;
   }
 
   &-item--btn {
@@ -381,19 +371,8 @@ body {
   }
 
   &__cart-item--btn {
-    @include x-btn-reset;
-
-    width: 100%;
-
-    color: var(--color-neutral-white);
-
-    border-radius: var(--full-border-radius);
-    background-color: var(--color-red);
-
-    padding: rem(12px);
+    @include x-primary-btn;
     margin-block-start: rem(20px);
-
-    cursor: pointer;
   }
 }
 
