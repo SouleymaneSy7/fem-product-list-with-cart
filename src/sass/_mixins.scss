@@ -2,6 +2,7 @@
 @use "sass:math";
 @use "sass:map";
 @use "./breakpoints" as *;
+@use "./functions" as *;
 
 // ================================
 //      Media Queries Mixins
@@ -69,4 +70,19 @@
 @mixin x-img-ratio {
   object-fit: cover;
   aspect-ratio: 1 / 1;
+}
+
+@mixin x-primary-btn {
+  @include x-btn-reset;
+
+  width: 100%;
+
+  color: var(--color-neutral-white);
+
+  border-radius: var(--full-border-radius);
+  background-color: var(--color-red);
+
+  padding: rem(12px);
+
+  cursor: pointer;
 }
