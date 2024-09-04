@@ -14,6 +14,7 @@ type ModalPropsType = {
   showModal: boolean;
   closeModal: () => void;
   totalPrice: number;
+  forwardedRef: { current: HTMLElement | null };
 };
 
 type ConfirmModalPropsType = {
@@ -32,8 +33,19 @@ const ConfirmModal = ({
   showModal,
   closeModal,
   totalPrice,
+  forwardedRef,
 }: ConfirmModalPropsType) => {
   const cartItems = useCartStore((state) => state.cartItems);
+
+  React.useEffect(() => {
+    const bodyElement = document.querySelector("body");
+
+    forwardedRef.current?.scrollIntoView({ behavior: "smooth" });
+
+    if (bodyElement) {
+      bodyElement.style.overflow = showModal ? "hidden" : "auto";
+    }
+  }, [showModal, forwardedRef]);
 
   return (
     <React.Fragment>
@@ -77,4 +89,4 @@ const ConfirmModal = ({
   );
 };
 
-export default ConfirmModal;  
+export default ConfirmModal;

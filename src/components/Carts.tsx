@@ -9,7 +9,11 @@ import Button from "./Buttons";
 import { formatNumber } from "@/utils/currencyFormat";
 import { CarbonNeutralIcon, EmptyCartIcon } from "./icons/Icons.component";
 
-const Carts = () => {
+type CartPropsType = {
+  forwardedRef: { current: HTMLElement | null };
+};
+
+const Carts = ({ forwardedRef }: CartPropsType) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const cartItems = useCartStore((state) => state.cartItems);
@@ -90,6 +94,7 @@ const Carts = () => {
         showModal={isOpen}
         closeModal={closeConfirmModal}
         totalPrice={totalPrice}
+        forwardedRef={forwardedRef}
       />
     </React.Fragment>
   );
