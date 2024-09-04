@@ -375,7 +375,7 @@ body {
   }
 
   &__cart-item-container {
-    padding: rem(20px);
+    padding: rem(10px) rem(20px);
     background-color: var(--color-neutral-rose-100);
     border-radius: rem(10px);
   }
@@ -404,7 +404,7 @@ body {
   &__flex {
     @include x-flex-between;
 
-    padding-block: rem(20px);
+    padding-block: rem(14px);
     border-bottom: rem(1px) solid var(--color-neutral-rose-300);
   }
 
@@ -451,7 +451,7 @@ body {
 .confirm__cart-item__order {
   @include x-flex-between;
 
-  margin-block-start: rem(20px);
+  margin-block-start: rem(10px);
 
   & strong {
     font-size: var(--fs-24);

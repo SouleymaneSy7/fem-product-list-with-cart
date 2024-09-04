@@ -1,39 +1,37 @@
 // Regular Weight
 @font-face {
-  font-family: "Red Hat Text";
+  font-family: "soul";
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: local("Red Hat Text"), local("Red Hat Text Regular"),
-    url("../assets/fonts/static/RedHatText-Regular.woff2") format("woff2"),
-    url("../assets/fonts/static/RedHatText-Regular.woff") format("woff"),
-    url("../assets/fonts/static/RedHatText-Regular.ttf") format("truetype")
-      url("../assets/fonts/static/RedHatText-Regular.eot");
+  src: local("Red Hat Text"),
+    url("../assets/fonts/static/red-hat-text-regular.woff2") format("woff2"),
+    url("../assets/fonts/static/red-hat-text-regular.woff") format("woff"),
+    url("../assets/fonts/static/red-hat-text-regular.ttf") format("truetype")
+      url("../assets/fonts/static/red-hat-text-regular.eot");
 }
 
 // Semi Bold Weight
 @font-face {
-  font-family: "Red Hat Text";
+  font-family: "soul";
   font-style: normal;
   font-display: swap;
   font-weight: 600;
-  src: local("Red Hat Text"), local("Red Hat Text Semi Bold"),
-    local("Red Hat Text SemiBold"),
-    url("../assets/fonts/static/RedHatText-SemiBold.woff2") format("woff2"),
-    url("../assets/fonts/static/RedHatText-SemiBold.woff") format("woff"),
-    url("../assets/fonts/static/RedHatText-SemiBold.ttf") format("truetype")
-      url("../assets/fonts/static/RedHatText-SemiBold.eot");
+  src: url("../assets/fonts/static/red-hat-text-semi-bold.woff2")
+      format("woff2"),
+    url("../assets/fonts/static/red-hat-text-semi-bold.woff") format("woff"),
+    url("../assets/fonts/static/red-hat-text-semi-bold.ttf") format("truetype")
+      url("../assets/fonts/static/red-hat-text-semi-bold.eot");
 }
 
 // Bold Weight
 @font-face {
-  font-family: "Red Hat Text";
+  font-family: "soul";
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: local("Red Hat Text"), local("Red Hat Text Bold"),
-    url("../assets/fonts/static/RedHatText-Bold.woff2") format("woff2"),
-    url("../assets/fonts/static/RedHatText-Bold.woff") format("woff"),
-    url("../assets/fonts/static/RedHatText-Bold.ttf") format("truetype")
-      url("../assets/fonts/static/RedHatText-Bold.eot");
+  src: url("../assets/fonts/static/red-hat-text-bold.ttf") format("woff2"),
+    url("../assets/fonts/static/red-hat-text-bold.ttf.woff") format("woff"),
+    url("../assets/fonts/static/red-hat-text-bold.ttf.ttf") format("truetype")
+      url("../assets/fonts/static/red-hat-text-bold.ttf.eot");
 }
