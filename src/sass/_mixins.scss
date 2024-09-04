@@ -30,11 +30,6 @@
 //      Customs Mixins
 // =========================
 
-@mixin x-grid-center {
-  display: grid;
-  place-items: center;
-}
-
 @mixin x-flex-between {
   display: flex;
   justify-content: space-between;
@@ -47,13 +42,31 @@
   align-items: center;
 }
 
-@mixin x-flex-flex-between {
+@mixin x-flex-start {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
 }
 
 @mixin x-flex-align {
   display: flex;
   align-items: center;
+}
+
+@mixin x-flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin x-btn-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+@mixin x-img-ratio {
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
